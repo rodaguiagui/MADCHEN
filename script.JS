@@ -1,15 +1,11 @@
-const boton = document.getElementById("enviar");
-const input = document.getElementById("mensaje");
-
-// Número de WhatsApp (sin + ni espacios)
-const numeroWhatsApp = "34609810168";
-
-boton.addEventListener("click", () => {
-    let mensaje = input.value.trim();
-    if (!mensaje) {
-        mensaje = "Hola, somos las hermanas chilenoalemanas"; // mensaje por defecto
+const boton = document.getElementById('enviar');
+boton.addEventListener('click', () => {
+    const mensaje = document.getElementById('mensaje').value;
+    if (mensaje.trim() === "") {
+        alert("Por favor, escribe un mensaje antes de enviar.");
+        return;
     }
-    mensaje = encodeURIComponent(mensaje);
-    const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
-    window.open(url, "_blank"); // abre WhatsApp en nueva pestaña
+    const telefono = "569XXXXXXXX"; // reemplaza con tu número de WhatsApp
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
 });
