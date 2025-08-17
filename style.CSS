@@ -36,31 +36,42 @@ p {
     line-height: 1.6;
 }
 
+/* 🔹 Área de texto más grande */
 textarea {
     width: 100%;
-    height: 80px;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 16px;
-    border-radius: 6px;
+    height: 150px;        /* mucho más alto */
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 18px;      /* letras más grandes */
+    border-radius: 10px;
     border: 1px solid #ccc;
-    resize: none;
+    resize: vertical;
+    box-sizing: border-box;
 }
 
+/* 🔹 Botón grande y llamativo */
 button {
-    margin-top: 10px;
-    padding: 12px 20px;
-    font-size: 16px;
-    background: #25D366; /* Verde WhatsApp */
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 18px 20px;   /* más alto y ancho */
+    font-size: 20px;      /* letras grandes */
+    font-weight: bold;
+    background: #25D366;  /* Verde WhatsApp */
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.1s;
 }
 
 button:hover {
     background: #1ebe5a;
+    transform: scale(1.02); /* efecto de agrandarse */
+}
+
+button:active {
+    transform: scale(0.98); /* efecto de clic */
 }
 
 /* 🎥 Video responsivo */
