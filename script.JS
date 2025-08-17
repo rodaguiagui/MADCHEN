@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Número de WhatsApp España: +34 609 810 168
+        // ⚠️ Número de WhatsApp correcto
         let telefono = "34609810168";
 
         // URL de WhatsApp
