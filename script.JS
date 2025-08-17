@@ -1,11 +1,22 @@
-const boton = document.getElementById('enviar');
-boton.addEventListener('click', () => {
-    const mensaje = document.getElementById('mensaje').value;
-    if (mensaje.trim() === "") {
-        alert("Por favor, escribe un mensaje antes de enviar.");
-        return;
-    }
-    const telefono = "569XXXXXXXX"; // reemplaza con tu número de WhatsApp
-    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
+document.addEventListener("DOMContentLoaded", () => {
+    const boton = document.getElementById("enviar");
+    const mensajeInput = document.getElementById("mensaje");
+
+    boton.addEventListener("click", () => {
+        let mensaje = mensajeInput.value.trim();
+
+        if (mensaje === "") {
+            alert("Por favor, escribe un mensaje antes de enviarlo.");
+            return;
+        }
+
+        // Número de WhatsApp España: +34 609 810 168
+        let telefono = "34609810168";
+
+        // URL de WhatsApp
+        let url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
+        // Abrir en nueva pestaña
+        window.open(url, "_blank");
+    });
 });
