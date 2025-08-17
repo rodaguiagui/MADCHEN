@@ -10,13 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // ⚠️ Número de WhatsApp correcto
+        // Número de WhatsApp en formato internacional (+34 España)
         let telefono = "34609810168";
 
-        // URL de WhatsApp
-        let url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+        // URL de WhatsApp (funciona en móvil y web)
+        let url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
 
-        // Abrir en nueva pestaña
         window.open(url, "_blank");
     });
 });
